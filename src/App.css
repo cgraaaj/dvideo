@@ -13,8 +13,60 @@
   }
 }
 
+/* .parent {
+  position: relative;
+  .header {
+    height: 200px;
+    width: 150px;
+    border: 2px dashed red;
+  }
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 180px;
+    width: 140px;
+    border: 2px solid blue;
+    text-align: end;
+  }
+} */
+
+.parent{
+  display: grid;
+  position:absolute;
+}
+
+.parent > * {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+}
+
+.parent .myvid {
+  z-index: 1;
+}
+
+.parent .next {
+  position: absolute;
+  z-index: 2;
+  bottom: 25%;
+  right: 5%;
+}
+
+.parent .prev {
+  position: absolute;
+  z-index: 2;
+  bottom: 25%;
+  left: 5%;}
+
+.parent .google {
+  position: absolute;
+  z-index: 2;
+  top: 20%;
+  right: 5%;
+}
+
 .App-header {
-  background-color: #282c34;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
